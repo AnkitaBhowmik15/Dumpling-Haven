@@ -19,10 +19,10 @@ db.once('open',()=>console.log("Connected to Database"))
 
 // document.getElementById("loginForm").addEventListener("submit", function(event) {
 //     event.preventDefault();
-  
+
 //     const username = document.getElementById("username").value;
 //     const password = document.getElementById("password").value;
-  
+
 
 app.post("/sign_up",(req,res)=>{
     var name = req.body.fullName;
