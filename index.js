@@ -45,6 +45,8 @@ app.post("/sign_up",(req,res)=>{
         // Check if the document was found
         if (doc) {
           console.log(`Document with ID ${email} found:`, doc);
+        //   res.status(400).send({ message: 'User already exists!' });
+        // alert('Sign up successful!');
         //   app.get('/alert', (req, res) => {
         //     console.log('Alert')
         //     res.send({ message: 'Hello, this is an alert!' });
@@ -57,6 +59,7 @@ app.post("/sign_up",(req,res)=>{
                 throw err;
             }
             console.log("Record Inserted Successfully");
+            return res.redirect('signup_success.html')
         });
         }
     
@@ -72,7 +75,7 @@ app.post("/sign_up",(req,res)=>{
     //     console.log("Record Inserted Successfully");
     // });
 
-    return res.redirect('signup_success.html')
+    
 
 })
 
@@ -124,11 +127,16 @@ app.post("/sign_in",(req,res)=>{
 // }).listen(3000);
 
 app.get("/",(req,res)=>{
-    res.set({
-        "Allow-access-Allow-Origin": '*'
-    })
-    return res.redirect('./homepage.html');
+    // res.set({
+    //     "Allow-access-Allow-Origin": '*'
+    // })
+    return res.redirect('/login');
 }).listen(3000);
+
+app.get('/login', (req, res) => {
+    // Render the login page
+    return res.redirect('./index2.html');
+  });
 
 
 console.log("Listening on PORT 3000");
