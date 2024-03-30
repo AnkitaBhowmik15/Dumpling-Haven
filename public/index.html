@@ -58,11 +58,11 @@
 
           <div class="hero-content">
 
-            <p class="hero-subtitle">Eat Sleep And</p>
+            <p class="hero-subtitle">The Perfect Bite Every Time!</p>
 
-            <h2 class="h1 hero-title">Supper delicious Burger in town!</h2>
+            <h2 class="h1 hero-title">Supper delicious Dumpling in town!</h2>
 
-            <p class="hero-text">Food is any substance consumed to provide nutritional support for an organism.</p>
+            <p class="hero-text">From the Kitchen to Your Plate: Dumpling Haven Nourishes Every Bite.</p>
 
             <button class="btn">Book A Table</button>
 
@@ -72,7 +72,7 @@
             <img src="./assets/images/hero-banner-bg.png" width="820" height="716" alt="" aria-hidden="true"
               class="w-100 hero-img-bg">
 
-            <img src="./assets/images/hero-banner.png" width="700" height="637" loading="lazy" alt="Burger"
+            <img src="./assets/images/hero-banner.png" width="700" height="637" loading="lazy" alt="Momos"
               class="w-100 hero-img">
           </figure>
 
@@ -83,9 +83,25 @@
 
 
 
-      <!-- 
+      <!--
         - #PROMO
       -->
+      <ul id="data-list">
+        <li>heee</li>
+      </ul>
+        <script>
+          fetch('/data')
+            .then(response => response.json())
+            .then(data => {
+              const dataList = document.getElementById('data-list');
+              data.forEach(item => {
+                const listItem = document.createElement('li');
+                listItem.textContent = `${item.title}: ${item.description}`; // Replace field1, field2 with your actual field names
+                dataList.appendChild(listItem);
+              });
+            })
+            .catch(error => console.error('Error fetching data:', error));
+        </script>
 
       <section class="section section-divider white promo">
         <div class="container">

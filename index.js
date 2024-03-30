@@ -17,9 +17,25 @@ var db = mongoose.connection;
 db.on('error',()=>console.log("Error in Connecting to Database"));
 db.once('open',()=>console.log("Connected to Database"))
 
+app.get('/data', (req, res) => {
+  db.collection('featutredItems').find({}).toArray((err, result) => {
+    if (err) {
+      console.error('Error retrieving data from MongoDB:', err);
+      res.status(500).send('Internal Server Error');
+      return;
+    }
+    res.json(result);
+  });
+});
+
+app.get('/', (req, res) => {
+  res.sendFile(__dirname + '/index.html');
+  console.log('Data Fetched');
+});
+
 // document.getElementById("loginForm").addEventListener("submit", function(event) {
 //     event.preventDefault();
-  
+
 //     const username = document.getElementById("username").value;
 //     const password = document.getElementById("password").value;
 
@@ -41,7 +57,7 @@ app.post("/sign_up",(req,res)=>{
 
     db.collection('users').findOne({ _id: email }, (err, doc) => {
         if (err) throw err;
-    
+
         // Check if the document was found
         if (doc) {
           console.log(`Document with ID ${email} found:`, doc);
@@ -62,10 +78,10 @@ app.post("/sign_up",(req,res)=>{
             return res.redirect('signup_success.html')
         });
         }
-    
+
         // Close the connection
         // client.close();
-        
+
       });
 
     // db.collection('users').insertOne(data,(err,collection)=>{
@@ -75,7 +91,7 @@ app.post("/sign_up",(req,res)=>{
     //     console.log("Record Inserted Successfully");
     // });
 
-    
+
 
 })
 
@@ -88,17 +104,15 @@ app.post("/sign_in",(req,res)=>{
         "password" : password
     }
 
-    console.log(data)   
+    console.log(data)
     db.collection('users').findOne({ _id: email }, (err, doc) => {
         if (err) throw err;
-    
         // Check if the document was found
         if (doc) {
           console.log(`Document with ID ${email} found:`, doc);
         } else {
           console.log(`Document with ID ${email} not found.`);
         }
-    
         // Close the connection
         // client.close();
 
