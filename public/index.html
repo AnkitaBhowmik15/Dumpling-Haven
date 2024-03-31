@@ -1,11 +1,11 @@
-<!DOCTYPE html>
+<!DOCTYPE html
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dumpling Haven - Home Page</title>
   <link rel="stylesheet" href="./homeStyles.css">
-  <script src="./homeScript.js"></script>
+  <script src="./homeScript.js" defer></script>
 </head>
 <body>
   <header>
@@ -33,11 +33,10 @@
         <li><a href="contact.html">Contact</a></li>
       </ul>
       <div class="basket"><a href="/login">Login/Signup</a></div>
-      
-       <!-- <button id="login-button">Login</button> -->
+
+      <!-- <button id="login-button">Login</button> -->
     </nav>
   </header>
-
   <!-- <main>
     <section class="description">
         <div class="container">
@@ -49,7 +48,7 @@
   <main>
     <article>
 
-      <!-- 
+      <!--
         - #HERO
       -->
 
@@ -86,22 +85,14 @@
       <!--
         - #PROMO
       -->
+      <div class="featured-items-list">
+        <!-- Featured items will be inserted here dynamically -->
+      </div>
+
+
       <ul id="data-list">
         <li>heee</li>
       </ul>
-        <script>
-          fetch('/data')
-            .then(response => response.json())
-            .then(data => {
-              const dataList = document.getElementById('data-list');
-              data.forEach(item => {
-                const listItem = document.createElement('li');
-                listItem.textContent = `${item.title}: ${item.description}`; // Replace field1, field2 with your actual field names
-                dataList.appendChild(listItem);
-              });
-            })
-            .catch(error => console.error('Error fetching data:', error));
-        </script>
 
       <section class="section section-divider white promo">
         <div class="container">

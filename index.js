@@ -1,7 +1,6 @@
 var express = require("express")
 var bodyParser = require("body-parser")
 var mongoose = require("mongoose")
-
 const app = express()
 
 app.use(bodyParser.json())
@@ -15,29 +14,19 @@ mongoose.connect('mongodb://0.0.0.0:27017/restaurant',{ useNewUrlParser: true, u
 var db = mongoose.connection;
 
 db.on('error',()=>console.log("Error in Connecting to Database"));
-db.once('open',()=>console.log("Connected to Database"))
+db.once('open',() => console.log("Connected to Database"));
 
-app.get('/data', (req, res) => {
-  db.collection('featutredItems').find({}).toArray((err, result) => {
-    if (err) {
-      console.error('Error retrieving data from MongoDB:', err);
-      res.status(500).send('Internal Server Error');
-      return;
-    }
-    res.json(result);
-  });
-});
+// app.get('/data', (req, res) => {
+//   db.collection('featutredItems').find().toArray((err, result) => {
+//     if (err) {
+//       console.error('Error retrieving data from MongoDB:', err);
+//       res.status(500).send('Internal Server Error');
+//       return;
+//     }
+//     res.json(result);
+//   });
+// });
 
-app.get('/', (req, res) => {
-  res.sendFile(__dirname + '/index.html');
-  console.log('Data Fetched');
-});
-
-// document.getElementById("loginForm").addEventListener("submit", function(event) {
-//     event.preventDefault();
-
-//     const username = document.getElementById("username").value;
-//     const password = document.getElementById("password").value;
 
 app.post("/sign_up",(req,res)=>{
     var name = req.body.fullName;
@@ -55,7 +44,8 @@ app.post("/sign_up",(req,res)=>{
         "password" : password
     }
 
-    db.collection('users').findOne({ _id: email }, (err, doc) => {
+    if(name != "" || email != "" || phno != "" || password != "")
+    {db.collection('users').findOne({ _id: email }, (err, doc) => {
         if (err) throw err;
 
         // Check if the document was found
@@ -82,7 +72,10 @@ app.post("/sign_up",(req,res)=>{
         // Close the connection
         // client.close();
 
-      });
+      });} else {
+        console.log('Not Accept');
+        return res.redirect('signup_success.html');
+      }
 
     // db.collection('users').insertOne(data,(err,collection)=>{
     //     // if(err){
@@ -94,6 +87,7 @@ app.post("/sign_up",(req,res)=>{
 
 
 })
+
 
 app.post("/sign_in",(req,res)=>{
     var email = req.body.email;
@@ -133,19 +127,34 @@ app.post("/sign_in",(req,res)=>{
 //     const { username, password } = req.body;
 
 
-// app.get("/",(req,res)=>{
-//     res.set({
-//         "Allow-access-Allow-Origin": '*'
-//     })
-//     return res.redirect('index.html');
-// }).listen(3000);
-
 app.get("/",(req,res)=>{
-    // res.set({
-    //     "Allow-access-Allow-Origin": '*'
-    // })
-    return res.redirect('/login');
+    res.set({
+        "Allow-access-Allow-Origin": '*'
+    })
+    return res.redirect('index.html');
 }).listen(3000);
+
+// app.get('/',(req,res)=>{
+//   return res.redirect('./index.html');
+// });
+
+app.get('/api/users',(req,res)=> {
+  users = [{
+      id: '123',
+      name: 'Vikram'
+    },
+    {
+      id:'456',
+      name: 'Rahul'
+    },
+    {
+      id: '789',
+      name: 'Ajay'
+    }
+  ];
+
+  res.json(users);
+});
 
 app.get('/login', (req, res) => {
     // Render the login page
