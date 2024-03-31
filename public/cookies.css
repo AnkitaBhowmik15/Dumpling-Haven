@@ -1,0 +1,35 @@
+.cookie_pop_up{
+    padding-left: 2px;
+    margin-left: calc(2vw / 2 - 2px);
+    background-color: rgba(0,0,255,0.1);
+    font-family:Arial, Helvetica, sans-serif;
+    width: 98vw;
+    height: 20vh;
+    border-radius: 10px;
+    border-style: solid;
+    border-width: 2px;
+    position: fixed;
+    bottom: 2px;
+}
+.cookie_pop_up .cookie_button{
+    background-color: rgba(0,0,255,0.2);
+    border-radius: 5px;
+    font-size: medium;
+    width: 70px;
+    height: 30px;
+}
+.cookie_pop_up .adjust{
+    display: flex;
+    justify-content: space-between;
+}
+.cookie_pop_up .adjust .cookie_close{
+    width: 20px;
+    border-radius: 5px;
+    border-width: 0.1px;
+    border-style: solid;
+    border-color: black;
+}
+.cookie_button:hover, .cookie_close:hover{
+    cursor: pointer;
+}
+
