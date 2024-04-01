@@ -28,11 +28,11 @@ db.once('open',() => console.log("Connected to Database"));
 // });
 
 
-app.post("/sign_up",(req,res)=>{
-    var name = req.body.fullName;
-    var email = req.body.email;
-    var phno = req.body.phoneNumber;
-    var password = req.body.password;
+app.post("/sign_up", async (req,res)=>{
+    var name = await req.body.fullName;
+    var email = await  req.body.email;
+    var phno = await  req.body.phoneNumber;
+    var password = await  req.body.password;
     console.log(name);
     console.log(email);
 
@@ -48,14 +48,16 @@ app.post("/sign_up",(req,res)=>{
     {db.collection('users').findOne({ _id: email }, (err, doc) => {
         if (err) throw err;
 
+        console.log(doc);
+
         // Check if the document was found
         if (doc) {
           console.log(`Document with ID ${email} found:`, doc);
+          return res.redirect('/error/userExist.html');
         //   res.status(400).send({ message: 'User already exists!' });
-        // alert('Sign up successful!');
-        //   app.get('/alert', (req, res) => {
+        //   app.get('/LoginAlert', (req, res) => {
         //     console.log('Alert')
-        //     res.send({ message: 'Hello, this is an alert!' });
+        //     res.json({ message: 'User already exist !', type: 'signup' });
         // });
 
         } else {
@@ -65,26 +67,14 @@ app.post("/sign_up",(req,res)=>{
                 throw err;
             }
             console.log("Record Inserted Successfully");
-            return res.redirect('signup_success.html')
+            return res.redirect('index.html')
         });
         }
 
-        // Close the connection
-        // client.close();
-
       });} else {
         console.log('Not Accept');
-        return res.redirect('signup_success.html');
+        // return res.redirect('signup_success.html');
       }
-
-    // db.collection('users').insertOne(data,(err,collection)=>{
-    //     // if(err){
-    //     //     throw err;
-    //     // }
-    //     console.log("Record Inserted Successfully");
-    // });
-
-
 
 })
 
@@ -104,8 +94,27 @@ app.post("/sign_in",(req,res)=>{
         // Check if the document was found
         if (doc) {
           console.log(`Document with ID ${email} found:`, doc);
+          if(doc.password == data.password)
+          {
+            return res.redirect('index.html');
+          }
+          if(doc.password != data.password)
+          {
+            // app.get('/incorrectPass', (req, res) => {
+            //   console.log('Alert')
+            //   res.json({ message: 'Check your email or password' , type: 'login'});
+            // });
+            console.log('Incorrect Pass')
+            return res.redirect('/error/incoPass.html')
+          }
         } else {
           console.log(`Document with ID ${email} not found.`);
+          // app.get('/incorrectPass', (req, res) => {
+          //   console.log('Alert')
+          //   res.json({ message: 'Invalid email or password' });
+          // });
+          console.log('userNotExist')
+          return res.redirect('/error/userNotExist.html')
         }
         // Close the connection
         // client.close();
@@ -118,8 +127,6 @@ app.post("/sign_in",(req,res)=>{
     //     // }
     //     console.log("Record Inserted Successfully");
     // });
-
-    return res.redirect('signup_success.html')
 
 })
 
@@ -759,7 +766,7 @@ app.get('/api/foodItems', (req, res) => {
   }]
 
     // Log fetched data
-    console.log('Fetched foodItems:', foodData);
+    // console.log('Fetched foodItems:', foodData);
     console.log('foodItems fetched')
 
 

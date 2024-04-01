@@ -40,7 +40,7 @@ fetch('/api/foodItems').then(response => response.json()).then(food => {
 
     const postMethods = () => {
         food.map((postData) => {
-        console.log(postData);
+        // console.log(postData);
         var newEle = document.createElement('li')
         newEle.innerHTML =
         `
@@ -140,27 +140,27 @@ fetch('/api/foodItems').then(response => response.json()).then(food => {
 });
 
 
-fetch('/api/users').then(response => response.json()).then(user => {
-    console.log('data Feteched');
-    console.log(user);
-    const postcontainer = document.querySelector(".featured-items-list");
+// fetch('/api/users').then(response => response.json()).then(user => {
+//     console.log('data Feteched');
+//     console.log(user);
+//     const postcontainer = document.querySelector(".featured-items-list");
 
-    const postMethods = () => {
-        user.map((postData) => {
-        console.log(postData);
-        var newEle = document.createElement('li')
-        newEle.innerHTML = `Hello ${postData.name}`;
+//     const postMethods = () => {
+//         user.map((postData) => {
+//         console.log(postData);
+//         var newEle = document.createElement('li')
+//         newEle.innerHTML = `Hello ${postData.name}`;
 
-        postcontainer.append(newEle);
-        // const newEle = document.createElement('div');
-        // newEle.classList.add('card');
-        // newEle.innerHTML = `
-        // <p> Hello World ${postData.title} </p>
-        // <p> New Element </p>
-        // `
-        // postcontainer.appendChild(newEle);
-        });
-    }
+//         postcontainer.append(newEle);
+//         // const newEle = document.createElement('div');
+//         // newEle.classList.add('card');
+//         // newEle.innerHTML = `
+//         // <p> Hello World ${postData.title} </p>
+//         // <p> New Element </p>
+//         // `
+//         // postcontainer.appendChild(newEle);
+//         });
+//     }
 
-    postMethods()
-});
+//     postMethods()
+// });
