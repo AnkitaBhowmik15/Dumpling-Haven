@@ -132,13 +132,32 @@ app.get("/",(req,res)=>{
         "Allow-access-Allow-Origin": '*'
     })
     return res.redirect('index.html');
-}).listen(3000);
+});
+
+app.listen(3000, () => {
+  console.log(`Server is running on port ${3000}`);
+});
 
 // app.get('/',(req,res)=>{
 //   return res.redirect('./index.html');
 // });
 
 app.get('/api/users',(req,res)=> {
+  // db.collection('featuredItems').find().toArray((err, data) => {
+  //   if(err) {
+  //     console.error('Error fetching data from MongoDB:', err);
+  //     res.status(500).send('Internal Server Error');
+  //     return;
+  //   }
+
+  //   if (!data || data.length === 0) {
+  //     console.log('No data found in MongoDB');
+  //     res.status(404).send('No data found');
+  //     return;
+  //   }
+
+  //   res.json(data);
+  // });
   users = [{
       id: '123',
       name: 'Vikram'

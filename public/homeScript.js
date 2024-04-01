@@ -32,6 +32,7 @@
 // postMethods()
 
 fetch('/api/users').then(response => response.json()).then(user => {
+    console.log('data Feteched');
     console.log(user);
     const postcontainer = document.querySelector(".featured-items-list");
 
@@ -54,5 +55,3 @@ fetch('/api/users').then(response => response.json()).then(user => {
 
     postMethods()
 });
-
-console.log(users)
