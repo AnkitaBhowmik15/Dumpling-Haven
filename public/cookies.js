@@ -24,3 +24,11 @@ function setCookie(name, value, days) {
 function acceptCookies() {
     setCookie('acceptedCookies', 'true', 1);
 }
+
+function acceptCookies() {
+    document.getElementById('card').style.display = 'none';
+    // Set cookies with specific values
+    document.cookie = "acceptedCookies=true; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=/";
+    document.cookie = "username=JohnDoe; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=/";
+    document.cookie = "language=en; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=/";
+}

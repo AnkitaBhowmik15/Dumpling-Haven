@@ -319,7 +319,7 @@ nav {
   .h4 { font-size: var(--fs-3); }
   
   .btn {
-    background-color: var(--bg-color, var(--deep-saffron));
+    background-color: var(--bg-color, rgb(58, 18, 3));
     color: var(--white);
     font-family: var(--ff-rubik);
     font-size: var(--fs-4);
@@ -330,6 +330,7 @@ nav {
   }
   
   .btn-hover {
+    color: white;
     position: relative;
     overflow: hidden;
     z-index: 1;
@@ -337,6 +338,7 @@ nav {
   
   .btn-hover::after {
     content: "";
+    color: white;
     position: absolute;
     bottom: -1px;
     left: 20px;
@@ -344,7 +346,7 @@ nav {
     height: 1px;
     transform: translate(-50%, 51%) scale(var(--scale, 1));
     border-radius: 50%;
-    background-color: var(--rich-black-fogra-29);
+    background-color: var(--dark-orange);
     z-index: -1;
     transition: var(--transition-2);
   }
@@ -399,7 +401,7 @@ nav {
   
   .section-title > .span {
     display: inline-block;
-    color: var(--deep-saffron);
+    color: rgb(61, 7, 7);
   }
   
   .abs-img {
@@ -651,7 +653,7 @@ nav {
   }
   
   .hero-subtitle {
-    color: var(--dark-orange);
+    color: rgba(0, 8, 62);
     font-family: var(--ff-shadows-into-light);
     font-size: var(--fs-3);
     letter-spacing: 1px;
@@ -659,13 +661,13 @@ nav {
   }
   
   .hero-title {
-    color: var(--champagne-pink);
+    color: rgb(40, 40, 40);
     max-width: 12ch;
     margin-inline: auto;
   }
   
   .hero-text {
-    color: var(--desert-sand);
+    color: rgb(43, 34, 66);
     margin-block: 15px 30px;
     max-width: 44ch;
     margin-inline: auto;
@@ -713,6 +715,8 @@ nav {
   }
   
   .promo-card .card-icon svg { margin-inline: auto; }
+
+  .promo-card .card-icon img { margin-inline: auto; }
   
   .promo-card:hover .card-icon path { fill: var(--white); }
   
@@ -956,7 +960,7 @@ nav {
   }
   
   .cta .section-text {
-    color: var(--gainsboro);
+    color: var(--white);
     margin-block: 25px 20px;
   }
   
@@ -1747,7 +1751,7 @@ nav {
     .food-menu-list { grid-template-columns: repeat(3, 1fr); }
   
     .food-menu-card { height: 100%; }
-  
+
   
   
     /**
@@ -1882,3 +1886,85 @@ nav {
     .footer-top .container { grid-template-columns: 1.4fr 1fr 1fr 1.6fr; }
   
   }
+
+
+
+/* Cookies */
+.card {
+  width: 300px;
+  height: 220px;
+  background-color: rgb(255,255,255);
+  display: flex;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 30px;
+  gap: 13px;
+  z-index: 9999;
+  overflow: hidden;
+  box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.062);
+}
+
+#cookieSvg {
+  width: 50px;
+}
+
+#cookieSvg g path {
+  fill: rgb(97, 81, 81);
+}
+
+.cookieHeading {
+  font-size: 1.2em;
+  font-weight: 800;
+  color: rgb(26, 26, 26);
+}
+
+.cookieDescription {
+  text-align: center;
+  font-size: 0.7em;
+  font-weight: 600;
+  color: rgb(99, 99, 99);
+}
+
+.buttonContainer {
+  display: flex;
+  gap: 20px;
+  flex-direction: row;
+}
+
+.acceptButton {
+  width: 80px;
+  height: 30px;
+  background-color: #7b57ff;
+  transition-duration: .2s;
+  border: none;
+  color: rgb(241, 241, 241);
+  cursor: pointer;
+  font-weight: 600;
+  border-radius: 20px;
+}
+
+.declineButton {
+  width: 80px;
+  height: 30px;
+  background-color: rgb(218, 218, 218);
+  transition-duration: .2s;
+  color: rgb(46, 46, 46);
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  border-radius: 20px;
+}
+
+.declineButton:hover {
+  background-color: #ebebeb;
+  transition-duration: .2s;
+}
+
+.acceptButton:hover {
+  background-color: #9173ff;
+  transition-duration: .2s;
+}
