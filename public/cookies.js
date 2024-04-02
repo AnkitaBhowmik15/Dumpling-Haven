@@ -31,5 +31,4 @@ function acceptCookies() {
 
     var currentTime = new Date().getTime();
     document.cookie = "cookieConsentTime=" + currentTime + "; expires=Thu, 31 Dec 2037 23:59:59 UTC; path=/";
-    document.cookie = "userData="+ 'Vikram' + "; expires=Thu, 31 Dec 2037 23:59:59 UTC; path=/";
 }
