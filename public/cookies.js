@@ -63,4 +63,5 @@ function resetCookies() {
     d.setTime(d.getTime() + (365 * 24 * 60 * 60 * 1000));
     let expires = "expires="+d.toUTCString();
     document.cookie = "userData=" + '' + ";" + expires + "; path=/";
+    document.getElementById('loginButton').innerHTML = `<div id="loginButton" class="basket"><a href="/login">Login/Signup</a></div>`;
 }
