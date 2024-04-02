@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="foodApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Food Items</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="app.js"></script>
+    <link rel="stylesheet" href="./homeStyles.css">
+</head>
+<body ng-controller="FoodController">
+    <h1>Food Items</h1>
+    <label>Filter by:</label>
+    <select ng-model="filterTag">
+        <option value="All">All</option>
+        <option value="Veg">Veg</option>
+        <option value="Non-veg">Non-Veg</option>
+    </select>
+
+    <ul class="food-menu-list">
+        <li ng-repeat="food in filteredFoods">
+            <div class="food-menu-card">
+                <div class="card-banner">
+                <img src="./assets/food/{{food.img}}" width="300" height="300" loading="lazy"
+                alt="Fried Chicken Unlimited" class="w-100">
+                <div class="badge">-{{food.Discount}}%</div>
+
+                <button class="btn food-menu-btn">Order Now</button>
+            </div>
+
+            <div class="wrapper">
+                <p class="category">{{food.Tag}}</p>
+
+                <div class="rating-wrapper">
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                </div>
+            </div>
+
+            <h3 class="h3 card-title">{{ food.Fooditem }}</h3>
+
+            <div class="price-wrapper">
+
+                <p class="price-text">Price:</p>
+
+                <data class="price">Rs. {{ food.Newprice }}</data>
+
+                <del class="del" value="69.00">Rs. {{food.Oldprice}}</del>
+
+            </div>
+
+            </div>
+            <!-- {{ food.Fooditem }} - {{ food.Tag }} -->
+        </li>
+    </ul>
+</body>
+</html>
