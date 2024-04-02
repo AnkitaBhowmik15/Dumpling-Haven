@@ -183,6 +183,7 @@ app.get('/api/foodItems', (req, res) => {
     },
     "Fooditem": "Pork and Chive Dumpling",
     "Discount": 15,
+    "Title":"Appetizers",
     "Tag": "Non-veg",
     "Oldprice": 220,
     "Newprice": 187,
@@ -194,6 +195,7 @@ app.get('/api/foodItems', (req, res) => {
     },
     "Fooditem": "Chicken and Mushroom Dumpling",
     "Discount": 15,
+    "Title":"Appetizers",
     "Tag": "Non-veg",
     "Oldprice": 250,
     "Newprice": 213,
@@ -205,6 +207,7 @@ app.get('/api/foodItems', (req, res) => {
     },
     "Fooditem": "Vegetable Dumpling (Spinach, Mushroom and Tofu) ",
     "Discount": 10,
+    "Title":"Appetizers",
     "Tag": "Veg",
     "Oldprice": 210,
     "Newprice": 189,
@@ -216,6 +219,7 @@ app.get('/api/foodItems', (req, res) => {
     },
     "Fooditem": "Seafood Surprise Dumpling",
     "Discount": 10,
+    "Title":"Appetizers",
     "Tag": "Non-veg",
     "Oldprice": 350,
     "Newprice": 315,
@@ -227,6 +231,7 @@ app.get('/api/foodItems', (req, res) => {
     },
     "Fooditem": "Cheese Burst Dumpling",
     "Discount": 10,
+    "Title":"Appetizers",
     "Tag": "Veg",
     "Oldprice": 180,
     "Newprice": 162,
@@ -238,10 +243,11 @@ app.get('/api/foodItems', (req, res) => {
     },
     "Fooditem": "Crispy Pork Dumpling",
     "Discount": 10,
+    "Title":"Appetizers",
     "Tag": "Non-veg",
     "Oldprice": 200,
     "Newprice": 180,
-    "img":"image5.avif"
+    "img":"image12.jpeg"
   },
   {
     "_id": {
@@ -249,6 +255,7 @@ app.get('/api/foodItems', (req, res) => {
     },
     "Fooditem": "Shrimp and Garlic Dumpling ",
     "Discount": 10,
+    "Title":"Appetizers",
     "Tag": "Non-veg",
     "Oldprice": 280,
     "Newprice": 252,
@@ -260,6 +267,7 @@ app.get('/api/foodItems', (req, res) => {
     },
     "Fooditem": "Vegetarian Potstickers",
     "Discount": 10,
+    "Title":"Appetizers",
     "Tag": "Veg",
     "Oldprice": 190,
     "Newprice": 171,
@@ -271,6 +279,7 @@ app.get('/api/foodItems', (req, res) => {
     },
     "Fooditem": "Crispy Chicken Cheese Dumpling",
     "Discount": 10,
+    "Title":"Appetizers",
     "Tag": "Non-veg",
     "Oldprice": 300,
     "Newprice": 270,
@@ -282,6 +291,7 @@ app.get('/api/foodItems', (req, res) => {
     },
     "Fooditem": "Chicken Dumpling Comfort Soup",
     "Discount": 10,
+    "Title":"Appetizers",
     "Tag": "Non-veg",
     "Oldprice": 290,
     "Newprice": 261,
@@ -293,6 +303,7 @@ app.get('/api/foodItems', (req, res) => {
     },
     "Fooditem": "Prawn Dumpling Broth Bliss",
     "Discount": 10,
+    "Title":"Appetizers",
     "Tag": "Non-veg",
     "Oldprice": 310,
     "Newprice": 279,
@@ -304,6 +315,7 @@ app.get('/api/foodItems', (req, res) => {
     },
     "Fooditem": "Tofu Dumpling Zen Noodle Soup",
     "Discount": 10,
+    "Title":"Appetizers",
     "Tag": "Veg",
     "Oldprice": 280,
     "Newprice": 252,
@@ -315,6 +327,7 @@ app.get('/api/foodItems', (req, res) => {
     },
     "Fooditem": "Prawn Dumpling Harmony Stew",
     "Discount": 10,
+    "Title":"Appetizers",
     "Tag": "Non-veg",
     "Oldprice": 310,
     "Newprice": 279,
@@ -326,6 +339,7 @@ app.get('/api/foodItems', (req, res) => {
     },
     "Fooditem": "Chicken and Prawn Dumpling Miso Soup",
     "Discount": 10,
+    "Title":"Appetizers",
     "Tag": "Non-veg",
     "Oldprice": 320,
     "Newprice": 288,
@@ -337,6 +351,7 @@ app.get('/api/foodItems', (req, res) => {
     },
     "Fooditem": "Dragon's Breath Chicken Dumpling Hot Pot",
     "Discount": 10,
+    "Title":"Appetizers",
     "Tag": "Non-veg",
     "Oldprice": 280,
     "Newprice": 252,
@@ -348,6 +363,7 @@ app.get('/api/foodItems', (req, res) => {
     },
     "Fooditem": "Dumpling Delight Platter (Chicken, Prawn, Tofu, Mushroom)",
     "Discount": 5,
+    "Title":"Appetizers",
     "Tag": "Non-veg",
     "Oldprice": 380,
     "Newprice": 361,
@@ -359,6 +375,7 @@ app.get('/api/foodItems', (req, res) => {
     },
     "Fooditem": "Golden Crisp Dumpling Basket",
     "Discount": 5,
+    "Title":"Appetizers",
     "Tag": "Non-veg/Veg",
     "Oldprice": 400,
     "Newprice": 380,
@@ -370,6 +387,7 @@ app.get('/api/foodItems', (req, res) => {
     },
     "Fooditem": "Blossom Dumpling Extravaganza",
     "Discount": 5,
+    "Title":"Appetizers",
     "Tag": "Non-veg/Veg",
     "Oldprice": 390,
     "Newprice": 371,
@@ -381,6 +399,7 @@ app.get('/api/foodItems', (req, res) => {
     },
     "Fooditem": "Dumpling Noodle Soup (with choice of dumplings)",
     "Discount": 5,
+    "Title":"Main Courses",
     "Tag": "Non-veg/Veg",
     "Oldprice": 400,
     "Newprice": 380,
@@ -392,6 +411,7 @@ app.get('/api/foodItems', (req, res) => {
     },
     "Fooditem": "Stir-Fried Noodles with Dumplings and Vegetables",
     "Discount": 5,
+    "Title":"Main Courses",
     "Tag": "Non-veg/Veg",
     "Oldprice": 310,
     "Newprice": 295,
@@ -403,6 +423,7 @@ app.get('/api/foodItems', (req, res) => {
     },
     "Fooditem": "Teriyaki Chicken Dumpling Rice Bowl",
     "Discount": 10,
+    "Title":"Main Courses",
     "Tag": "Non-veg",
     "Oldprice": 290,
     "Newprice": 261,
@@ -414,6 +435,7 @@ app.get('/api/foodItems', (req, res) => {
     },
     "Fooditem": "Beef Bulgogi Dumpling Rice Bowl",
     "Discount": 10,
+    "Title":"Main Courses",
     "Tag": "Non-veg",
     "Oldprice": 210,
     "Newprice": 189,
@@ -425,6 +447,7 @@ app.get('/api/foodItems', (req, res) => {
     },
     "Fooditem": "Tofu and Vegetable Dumpling Rice Bowl",
     "Discount": 10,
+    "Title":"Main Courses",
     "Tag": "Veg",
     "Oldprice": 180,
     "Newprice": 162,
@@ -436,6 +459,7 @@ app.get('/api/foodItems', (req, res) => {
     },
     "Fooditem": "Bok Choy Wrapped Dumpling",
     "Discount": 10,
+    "Title":"Main Courses",
     "Tag": "Non-veg/Veg",
     "Oldprice": 210,
     "Newprice": 189,
@@ -447,6 +471,7 @@ app.get('/api/foodItems', (req, res) => {
     },
     "Fooditem": "Kung Pao Dumplings",
     "Discount": 10,
+    "Title":"Main Courses",
     "Tag": "Non-veg",
     "Oldprice": 230,
     "Newprice": 207,
@@ -458,6 +483,7 @@ app.get('/api/foodItems', (req, res) => {
     },
     "Fooditem": "Sweet and Sour Dumplings",
     "Discount": 10,
+    "Title":"Main Courses",
     "Tag": "Non-veg/Veg",
     "Oldprice": 230,
     "Newprice": 207,
@@ -469,6 +495,7 @@ app.get('/api/foodItems', (req, res) => {
     },
     "Fooditem": "Spicy Garlic Dumpling Stir-Fry",
     "Discount": 10,
+    "Title":"Main Courses",
     "Tag": "Veg",
     "Oldprice": 170,
     "Newprice": 153,
@@ -480,6 +507,7 @@ app.get('/api/foodItems', (req, res) => {
     },
     "Fooditem": "Dumplings in Spicy Sichuan Sauce",
     "Discount": 10,
+    "Title":"Main Courses",
     "Tag": "Non-veg/Veg",
     "Oldprice": 190,
     "Newprice": 171,
@@ -491,6 +519,7 @@ app.get('/api/foodItems', (req, res) => {
     },
     "Fooditem": "Dumplings in Black Bean Sauce",
     "Discount": 10,
+    "Title":"Main Courses",
     "Tag": "Non-veg/Veg",
     "Oldprice": 220,
     "Newprice": 198,
@@ -502,6 +531,7 @@ app.get('/api/foodItems', (req, res) => {
     },
     "Fooditem": "Dumplings in Chili Oil",
     "Discount": 15,
+    "Title":"Main Courses",
     "Tag": "Non-veg/Veg",
     "Oldprice": 190,
     "Newprice": 162,
@@ -513,6 +543,7 @@ app.get('/api/foodItems', (req, res) => {
     },
     "Fooditem": "Asian Slaw: Shredded cabbage, carrots, and sesame dressing.",
     "Discount": 15,
+    "Title":"Sides",
     "Tag": "Veg",
     "Oldprice": 100,
     "Newprice": 85,
@@ -524,9 +555,11 @@ app.get('/api/foodItems', (req, res) => {
     },
     "Fooditem": "Steamed Greens: Bok Choy or Chinese Broccoli with Garlic Sauce.",
     "Discount": 15,
+    "Title":"Sides",
     "Tag": "Veg",
     "Oldprice": 100,
-    "Newprice": 85
+    "Newprice": 85,
+    "img":"steamed greens.webp"
   },
   {
     "_id": {
@@ -534,9 +567,11 @@ app.get('/api/foodItems', (req, res) => {
     },
     "Fooditem": "Fried Rice: Classic, Vegetable, or Shrimp Fried Rice.",
     "Discount": 15,
+    "Title":"Sides",
     "Tag": "Non-veg/Veg",
     "Oldprice": 180,
-    "Newprice": 153
+    "Newprice": 153,
+    "img":"Shrimp-Fried-Rice.jpg"
   },
   {
     "_id": {
@@ -544,9 +579,11 @@ app.get('/api/foodItems', (req, res) => {
     },
     "Fooditem": "Sauces: Soy sauce, chili oil, vinegar, and garlic sauce for dipping.",
     "Discount": 0,
+    "Title":"Sides",
     "Tag": "Veg",
     "Oldprice": 20,
-    "Newprice": 20
+    "Newprice": 20,
+    "img":"Sauces.jpg"
   },
   {
     "_id": {
@@ -554,9 +591,11 @@ app.get('/api/foodItems', (req, res) => {
     },
     "Fooditem": "Dragon Chicken",
     "Discount": 15,
+    "Title":"Sides",
     "Tag": "Non-veg",
     "Oldprice": 190,
-    "Newprice": 162
+    "Newprice": 162,
+    "img":"dragon-chicken.webp"
   },
   {
     "_id": {
@@ -564,9 +603,11 @@ app.get('/api/foodItems', (req, res) => {
     },
     "Fooditem": "Chili Prawn",
     "Discount": 15,
+    "Title":"Sides",
     "Tag": "Non-veg",
     "Oldprice": 250,
-    "Newprice": 213
+    "Newprice": 213,
+    "img":"Chilli-Prawns.webp"
   },
   {
     "_id": {
@@ -574,9 +615,11 @@ app.get('/api/foodItems', (req, res) => {
     },
     "Fooditem": "Chili Mushroom",
     "Discount": 15,
+    "Title":"Sides",
     "Tag": "Veg",
     "Oldprice": 160,
-    "Newprice": 136
+    "Newprice": 136,
+    "img":"chilli-mushroom.jpg"
   },
   {
     "_id": {
@@ -584,9 +627,11 @@ app.get('/api/foodItems', (req, res) => {
     },
     "Fooditem": "Chili Baby Corn and Tofu",
     "Discount": 15,
+    "Title":"Sides",
     "Tag": "Veg",
     "Oldprice": 210,
-    "Newprice": 179
+    "Newprice": 179,
+    "img":"chili-baby-corn.jpg"
   },
   {
     "_id": {
@@ -594,9 +639,11 @@ app.get('/api/foodItems', (req, res) => {
     },
     "Fooditem": "Red Bean Paste Dumpling",
     "Discount": 15,
+    "Title":"Desserts",
     "Tag": "Veg",
     "Oldprice": 170,
-    "Newprice": 145
+    "Newprice": 145,
+    "img":"redbeanpaste.jpg"
   },
   {
     "_id": {
@@ -604,9 +651,11 @@ app.get('/api/foodItems', (req, res) => {
     },
     "Fooditem": "Sesame Ball Dumpling",
     "Discount": 15,
+    "Title":"Desserts",
     "Tag": "Veg",
     "Oldprice": 170,
-    "Newprice": 145
+    "Newprice": 145,
+    "img":"sesameball.jpeg"
   },
   {
     "_id": {
@@ -614,9 +663,11 @@ app.get('/api/foodItems', (req, res) => {
     },
     "Fooditem": "Pineapple and Coconut Dumpling",
     "Discount": 15,
+    "Title":"Desserts",
     "Tag": "Veg",
     "Oldprice": 170,
-    "Newprice": 145
+    "Newprice": 145,
+    "img":"dessert1.jpeg"
   },
   {
     "_id": {
@@ -624,9 +675,11 @@ app.get('/api/foodItems', (req, res) => {
     },
     "Fooditem": "Chocolate Dumpling",
     "Discount": 15,
+    "Title":"Desserts",
     "Tag": "Veg",
     "Oldprice": 170,
-    "Newprice": 145
+    "Newprice": 145,
+    "img":"dessert2.jpeg"
   },
   {
     "_id": {
@@ -634,9 +687,11 @@ app.get('/api/foodItems', (req, res) => {
     },
     "Fooditem": "Mango Sticky Rice",
     "Discount": 15,
+    "Title":"Desserts",
     "Tag": "Veg",
     "Oldprice": 130,
-    "Newprice": 111
+    "Newprice": 111,
+    "img":"mangorice.jpeg"
   },
   {
     "_id": {
@@ -644,9 +699,11 @@ app.get('/api/foodItems', (req, res) => {
     },
     "Fooditem": "Fried Ice Cream",
     "Discount": 0,
+    "Title":"Desserts",
     "Tag": "Veg",
     "Oldprice": 110,
-    "Newprice": 110
+    "Newprice": 110,
+    "img":"icecream2.jpg"
   },
   {
     "_id": {
@@ -654,9 +711,11 @@ app.get('/api/foodItems', (req, res) => {
     },
     "Fooditem": "Rolled Ice Cream",
     "Discount": 0,
+    "Title":"Desserts",
     "Tag": "Veg",
     "Oldprice": 110,
-    "Newprice": 110
+    "Newprice": 110,
+    "img":"icecream.jpg"
   },
   {
     "_id": {
@@ -664,6 +723,7 @@ app.get('/api/foodItems', (req, res) => {
     },
     "Fooditem": "Cheese Cake",
     "Discount": 0,
+    "Title":"Desserts",
     "Tag": "Veg",
     "Oldprice": 110,
     "Newprice": 110,
@@ -675,6 +735,7 @@ app.get('/api/foodItems', (req, res) => {
     },
     "Fooditem": "Mango Milkshake",
     "Discount": 0,
+    "Title":"Beverages",
     "Tag": "Veg",
     "Oldprice": 90,
     "Newprice": 90,
@@ -686,6 +747,7 @@ app.get('/api/foodItems', (req, res) => {
     },
     "Fooditem": "Kiwi and Passion Fruit Shake",
     "Discount": 0,
+    "Title":"Beverages",
     "Tag": "Veg",
     "Oldprice": 90,
     "Newprice": 90,
@@ -697,6 +759,7 @@ app.get('/api/foodItems', (req, res) => {
     },
     "Fooditem": "Bubble Tea: Classic Milk Tea, Taro, Mango, or Matcha flavors.",
     "Discount": 0,
+    "Title":"Beverages",
     "Tag": "Veg",
     "Oldprice": 80,
     "Newprice": 80,
@@ -708,10 +771,11 @@ app.get('/api/foodItems', (req, res) => {
     },
     "Fooditem": " Lychee Martini",
     "Discount": 0,
+    "Title":"Beverages",
     "Tag": "Veg",
     "Oldprice": 90,
     "Newprice": 90,
-    "img":"mojito.webp"
+    "img":"martini.jpg"
   },
   {
     "_id": {
@@ -719,6 +783,7 @@ app.get('/api/foodItems', (req, res) => {
     },
     "Fooditem": "Sake Mojito",
     "Discount": 0,
+    "Title":"Beverages",
     "Tag": "Veg",
     "Oldprice": 90,
     "Newprice": 90,
@@ -730,6 +795,7 @@ app.get('/api/foodItems', (req, res) => {
     },
     "Fooditem": "Jasmine Tea",
     "Discount": 0,
+    "Title":"Beverages",
     "Tag": "Veg",
     "Oldprice": 70,
     "Newprice": 70,
@@ -741,10 +807,11 @@ app.get('/api/foodItems', (req, res) => {
     },
     "Fooditem": "Oolong Tea",
     "Discount": 0,
+    "Title":"Beverages",
     "Tag": "Veg",
     "Oldprice": 70,
     "Newprice": 70,
-    "img":"tea.jpg"
+    "img":"image13.jpeg"
   },
   {
     "_id": {
@@ -752,6 +819,7 @@ app.get('/api/foodItems', (req, res) => {
     },
     "Fooditem": "Cold Coffee",
     "Discount": 0,
+    "Title":"Beverages",
     "Tag": "Veg",
     "Oldprice": 90,
     "Newprice": 90,
